@@ -6,6 +6,11 @@ new Vue({
   mounted() {
     this.getCurrencies();
   },
+  computed: {
+    formattedCurrencies() {
+      return Object.values(this.currencies);
+    }
+  },
   methods: {
     getCurrencies() {
       const currencies = localStorage.getItem('currencies')
