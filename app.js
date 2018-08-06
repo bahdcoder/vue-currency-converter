@@ -47,5 +47,13 @@ new Vue({
           this.result = response.data.results[key].val
         })
     }
+  },
+  watch: {
+    from() {
+      this.result = 0;
+    },
+    to() {
+      this.result = 0;
+    }
   }
 })
